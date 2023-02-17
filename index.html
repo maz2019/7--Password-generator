@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Frontend Mentor | Password generator app</title>
+   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+   <link rel="stylesheet" href="assets/css/style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.4/tailwind.min.css"
+      integrity="sha512-paVHVRRhdoOu1nOXKnqDC1Vka0nh7FAmU3nsM4n2FKxOQTeF6crMdMfkVvEsuaOXZ6oEAVL5+wLbQcule/Xdag=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap"
+      rel="stylesheet">
+</head>
+
+<body>
+   <main class="main">
+      <h1 class="text-gray fs-body text-center title">Password Generator</h1>
+      <div class="field bg-dark-gray flex justify-between items-center">
+         <p id="fieldText" class="text-almost-white fs-HM ">P4$5W0rD!</p>
+         <div class="copy flex">
+            <p id="copyMsg" class="fs-body uppercase text-green">copied</p>
+            <img id="copyIcon" class="copyIcon" class="text-green" width="17.5" height="20"
+               src="assets/images/icon-copy.svg" alt="">
+         </div>
+      </div>
+      <div class="options bg-dark-gray">
+         <label for="slider" class="flex justify-between items-center text-almost-white fs-body">Character Length<span
+               class="sliderValue fs-HM text-green" id="sliderValue"></span></label>
+         <input class="slider block mt-4 mb-8 w-full bg-vdark-gray cursor-pointer" type="range" name="slider"
+            id="slider" min="5" max="15" value="8">
+         <div class="checkboxes flex flex-col gap-4 mb-4">
+            <label for="inclUppercase" class="checkboxLabel text-base text-almost-white">
+               <input type="checkbox" name="inclUppercase" id="inclUppercase">Include Uppercase Letters
+               <span class="checkmark"><img src="assets/images/icon-check.svg" alt="checked-icon"></span>
+            </label>
+            <label for="inclLowercase" class="checkboxLabel text-base text-almost-white">
+               <input type="checkbox" name="inclLowercase" id="inclLowercase">Include Lowercase Letters
+               <span class="checkmark"><img src="./assets/images/icon-check.svg" alt="checked-icon"></span>
+            </label>
+            <label for="inclNumber" class="checkboxLabel text-base text-almost-white">
+               <input type="checkbox" name="inclNumber" id="inclNumber">Include Numbers
+               <span class="checkmark"><img src="assets/images/icon-check.svg" alt="checked-icon"></span>
+            </label>
+            <label for="inclSymbol" class="checkboxLabel text-base text-almost-white">
+               <input type="checkbox" name="inclSymbol" id="inclSymbol">Include Symbols
+               <span class="checkmark"><img src="assets/images/icon-check.svg" alt="checked-icon"></span>
+            </label>
+         </div>
+         <div class="strength flex items-center justify-between">
+            <h2 class="fs-body text-gray uppercase">Strength</h2>
+            <div class="strengthLvl flex items-center">
+               <p class="fs-body text-almost-white uppercase" id="levelTxt">weak</p>
+               <div id="bar1" class="bars bar1"></div>
+               <div id="bar2" class="bars bar2"></div>
+               <div id="bar3" class="bars bar3"></div>
+               <div id="bar4" class="bars bar4"></div>
+            </div>
+         </div>
+         <button id="generateBtn" class="uppercase fs-body bg-green text-dark-gray button">Generate <svg width="12"
+               height="12" xmlns="http://www.w3.org/2000/svg">
+               <path fill="#24232C" d="m5.106 12 6-6-6-6-1.265 1.265 3.841 3.84H.001v1.79h7.681l-3.841 3.84z" />
+            </svg></button>
+      </div>
+      <p id="alert" class="fs-body alert">Please select one or more options</p>
+   </main>
+
+
+
+
+   <script src=" assets/js/main.js"></script>
+</body>
+
+</html>

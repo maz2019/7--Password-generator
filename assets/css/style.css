@@ -1,0 +1,263 @@
+:root {
+    --gray: hsl(251, 9%, 53%);
+    --dark-gray: hsl(247, 11%, 15%);
+    --vdark-gray: hsl(248, 15%, 11%);
+    --red: hwb(0 29% 3%);
+    --orange: hsl(13, 95%, 66%);
+    --yellow: hsl(42, 91%, 68%);
+    --green: hsl(127, 100%, 82%);
+    --almost-white: hsl(252, 11%, 91%);
+    --fs-HL: 2rem;
+    --fs-HM: 1.5rem;
+    --fs-Body: 1.125rem;
+}
+/* Colors */
+.bg-gray {
+    background-color: var(--gray);
+}
+.bg-dark-gray {
+    background-color: var(--dark-gray);
+}
+.bg-vdark-gray {
+    background-color: var(--vdark-gray);
+}
+.bg-red {
+    background-color: var(--red);
+}
+.bg-orange {
+    background-color: var(--orange);
+}
+.bg-yellow {
+    background-color: var(--yellow);
+}
+.bg-green {
+    background-color: var(--green);
+}
+.bg-almost-white {
+    background-color: var(--almost-white);
+}
+.text-gray {
+    color: var(--gray);
+}
+.text-dark-gray {
+    color: var(--dark-gray);
+}
+.text-vdark-gray {
+    color: var(--vdark-gray);
+}
+.text-red {
+    color: var(--red);
+}
+.text-orange {
+    color: var(--orange);
+}
+.text-yellow {
+    color: var(--yellow);
+}
+.text-green {
+    color: var(--green);
+}
+.text-almost-white {
+    color: var(--almost-white);
+}
+/* Font Sizes */
+.fs-HL {
+    font-size: var(--fs-HL);
+    line-height: 2.68rem;
+} 
+.fs-HM {
+    font-size: var(--fs-HM);
+    line-height: 1.93rem;
+}
+.fs-body {
+    font-size: var(--fs-Body);
+    line-height: 1.43rem;
+}
+/* Global */
+body {
+    font-family: "JetBrains Mono", monospace;
+    font-size: var(--fs-Body);
+    font-weight: 700;
+    background-color: var(--vdark-gray);
+    min-height: 100vh;
+    
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+.main {
+    margin-top: 4rem;
+    margin-inline: 1rem;
+}
+@media (min-width: 35em) {
+    .main {
+      max-width: 33.75rem;
+      margin-top: 8.3125rem;
+      margin-inline: auto;
+    }
+  }
+.field {
+   padding: 1rem; 
+   margin-bottom: 1rem;
+}
+.options {
+    padding: 17px 1rem;
+}
+.copy {
+    gap: 1rem;
+    align-items: center;
+}
+#copyMsg {
+    display: none;
+}
+.copyIcon {
+    opacity: 0.75;
+}
+.copy:hover {
+    cursor: pointer;
+}
+.copy:hover img {
+    opacity: 1;
+}
+.slider {
+    -webkit-appearance: none;
+    height: 25px;
+    background: var(--vdark-gray);
+    background-size: 30% 100%;
+    height: 8px;
+    background-image: linear-gradient(var(--green), var(--green));
+    background-size: 30% 100%;
+    background-repeat: no-repeat;
+  }
+  
+  .slider:hover {
+    opacity: 1;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: white;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+ 
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #04AA6D;
+    border: 2px solid var(--orange);
+
+    cursor: pointer;
+}
+.checkboxLabel {
+    display: block;
+    position: relative;
+    padding-left: 2.5rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-weight: 400;
+    align-items: center;
+}
+.checkboxLabel input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkboxLabel .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border: 2px solid var(--almost-white);
+    background-color: var(--dark-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.checkboxLabel:hover input ~ .checkmark{
+    border-color: var(--green);
+}
+.checkboxLabel input:checked ~ .checkmark{
+    border-color: var(--green);
+    background-color: var(--green);
+}
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+} */
+.checkboxLabel input:checked ~ .checkmark:after {
+    display: block;
+}
+.strength {
+    background-color: var(--vdark-gray);
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+.strengthLvl p {
+    margin-right: 0.5rem;
+}
+.bars {
+    width: 10px;
+    height: 28px;
+    border: 2px solid var(--yellow);
+    margin-left: 0.5rem;
+}
+.button {
+    width: 100%;
+    padding-top: 1.125rem;
+    padding-bottom: 1.125rem;
+    border: 2px solid var(--green);
+}
+.button svg {
+    display: inline;
+    margin-left: 1rem;
+}
+.button:hover {
+    background-color: var(--dark-gray);
+    color: var(--green);
+}
+.button:hover path {
+    fill: var(--green);
+}
+.alert {
+    display: none;
+    text-align: center;
+    color: var(--red);
+}
+
+/*  Level Classes */
+.tooWeak {
+    background-color: var(--red);
+    border: 2px solid var(--red);
+}
+.weak {
+    background-color: var(--orange);
+    border: 2px solid var(--orange);
+}
+.medium {
+    background-color: var(--yellow);
+    border: 2px solid var(--yellow);
+}
+.strong {
+    background-color: var(--green);
+    border: 2px solid var(--green);
+}
